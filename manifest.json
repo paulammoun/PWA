@@ -1,7 +1,7 @@
 {
-    "name": "Mobilevisit9d",
-    "short_name": "Mobilevisit9d",
-    "description": "",
+    "name": "Amiga-PWA",
+    "short_name": "Amiga-PWA",
+    "description": "ddd",
     "icons": [{
       	"src": "icons/icon-72.png",
         "sizes": "72x72",
@@ -47,7 +47,7 @@
     ],
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#47dde6",
-    "theme_color": "#ee6060"
+    "background_color": "hsl(303.08,76.47%,40%)",
+    "theme_color": "hsl(0,0%,20%)"
 }
 

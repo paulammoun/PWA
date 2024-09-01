@@ -1,8 +1,8 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'Mobilevisit9d_pwa_cache-v-02.04';
-const dynamicCacheName = 'Mobilevisit9d_pwa_dynamic_cache-v-02.04';
-const dynamicCacheSize = 10;
+const staticCacheName = 'Amiga-PWA_pwa_cache-v-91.28';
+const dynamicCacheName = 'Amiga-PWA_pwa_dynamic_cache-v-91.28';
+const dynamicCacheSize = 50;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
 const usingFirestore = false;
@@ -109,11 +109,13 @@ var filesToCache = [
 './clock.png',
 './doctor-consultation.png',
 './JS.js',
+'./listofinvoices.a5rpt',
 './manifest.json',
 './rotate.png',
 './searchicon2.png',
 './shopping.png',
 './skip.png',
+'./wait.gif',
 './index.html',
 
 ];
