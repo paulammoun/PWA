@@ -2390,7 +2390,7 @@ if(typeof DLG1_DlgObj == 'object') {
 		html: '<div style="display:none;"></div>'
 	},
 	footer: {
-		html: '<div style="display:table; margin:auto;"><div class="A5CWLayout" style="width: " >  <div id="DLG1.V.R1.STATICTEXT_8" title=""  class="" style="font-size: 7pt; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   ><strong>Copyright 2019-2024 PCS  Version 1.2.5 (build ) 101</strong>=</div> </div> </div>',
+		html: '<div style="display:table; margin:auto;"><div class="A5CWLayout" style="width: " >  <div id="DLG1.V.R1.STATICTEXT_8" title=""  class="" style="font-size: 7pt; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   ><strong>Copyright 2019-2024 PCS  Version 1.2.5 (build ) 102</strong>=</div> </div> </div>',
 		show: true
 	},
 	overlay: {
@@ -37954,7 +37954,9 @@ if(runMethod.toLowerCase() != 'ajax'  && typeof window['PRECOMPUTEDUX_4016a17f8f
 }
 }
 window['DLG1_ACTION_OpenReceiptList'] = function(rowNum,rowId,objEle) {
-var runMethod = 'ajax';
+var runMethod = 'precomputed';
+if(DLG1_DlgObj._embeddedMode) runMethod = 'ajax';
+if(DLG1_DlgObj._staticHTMLMode) runMethod = 'precomputed';
 if(runMethod == 'ajax') {
 if(typeof DLG1_DlgObj._onlineStatus != 'undefined') { 
 	if(DLG1_DlgObj._onlineStatus == 'offline') { 
@@ -37970,7 +37972,7 @@ go.ajaxCallbackTimeout = DLG1_DlgObj.ajaxCallbackTimeout;
 go.objectId = objEle.id;
 go.dialog2Name = 'listofreceipts';
 go.type = 'dialog2';
-go.alias = 'DLG1_LISTOFRECE_IFHI';;
+go.alias = 'DLG1_LISTOFRECE_GIIB';;
 go.submitCurrentFieldValues = true;
 go.sourceGridPart = 'O';
 go.sourceGridRowNumber = '1';
@@ -38002,7 +38004,33 @@ var flagCachedUX = false
 if(!obj || !flagCachedUX ) { 
 	//alert('initial render');
 	$('panelId').innerHTML = '<div style=\'\'  id=\'GRIDDIV_panelId\'></div>'; 
-	A5.component.runGenericComponent(go);if(typeof __showWaitMessage != 'undefined') __showWaitMessage.call();;
+	var runMethod = 'precomputed';
+if(DLG1_DlgObj._embeddedMode) runMethod = 'ajax';
+if(DLG1_DlgObj._staticHTMLMode) runMethod = 'precomputed';
+if(runMethod == 'ajax')if(typeof __showWaitMessage != 'undefined') __showWaitMessage.call()
+if(runMethod.toLowerCase() != 'ajax'  && typeof window['PRECOMPUTEDUX_6371644455ec4c8cb178f6dcad6bf497_listofreceipts'] == 'function') { 
+	//PRECOMPUTED_UX_COMPONENT: {functionName: 'PRECOMPUTEDUX_6371644455ec4c8cb178f6dcad6bf497_listofreceipts', uxname: 'listofreceipts', alias: 'DLG1_LISTOFRECE_GIIB'}
+	var jsToRun = PRECOMPUTEDUX_6371644455ec4c8cb178f6dcad6bf497_listofreceipts(go);
+	eval(jsToRun);
+	//must run code to initialize values
+	try{
+		var objx = window[go.alias.toUpperCase() + '_DlgObj'];
+		objx.populate(objx.originalValues[0]);
+	}catch(e) {};
+	if(typeof go.onLoadCompleteJavascript != 'undefined') { 
+		var txt = go.onLoadCompleteJavascript.split(':')[1];
+		if(typeof txt != 'undefined') { 
+			if(typeof DLG1_DlgObj._ajaxCallbackCompleteCode != 'undefined') { 
+				setTimeout(function() { 
+					DLG1_DlgObj._ajaxCallbackCompleteCode[txt].call();
+				},500);
+			}
+		}
+	}
+} else {
+	A5.component.runGenericComponent(go)
+}
+;
 }else { 
 	//alert('refresh');
 	if(typeof go.specialDialogMode == 'undefined') go.specialDialogMode = 'refreshUX'
@@ -56809,7 +56837,7 @@ DLG1_DlgObj.__info = {
 	"dateCreated": "2018-10-14",
 	"dateLastEdited": "2024-9-1",
 	"comments": "",
-	"revisionnumber": 1883
+	"revisionnumber": 1886
 }
 A5.__csdfmt = (obj) =>{ if(obj) return obj.stateInfo.__dtfmt};DLG1_DlgObj._workingPreview = false;
 $u.decimal = '.';
