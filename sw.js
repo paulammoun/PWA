@@ -1,7 +1,7 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'Mobilevisit8_pwa_cache-v-01.02';
-const dynamicCacheName = 'Mobilevisit8_pwa_dynamic_cache-v-01.02';
+const staticCacheName = 'Mobilevisit9d_pwa_cache-v-02.04';
+const dynamicCacheName = 'Mobilevisit9d_pwa_dynamic_cache-v-02.04';
 const dynamicCacheSize = 10;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
@@ -104,10 +104,16 @@ var filesToCache = [
 './javascript/a5_url.js',
 './svg/AASVG.js',
 './Amiga_logo_pcs_CroppedXS.png',
+'./arrows.png',
 './clearsearch2.png',
+'./clock.png',
+'./doctor-consultation.png',
+'./JS.js',
 './manifest.json',
+'./rotate.png',
 './searchicon2.png',
 './shopping.png',
+'./skip.png',
 './index.html',
 
 ];
