@@ -4,7 +4,7 @@
     box-shadow: inset 0px 0px 10px 20px rgba(255, 255, 255, 0.3); }
   to {
     display: none;
-    box-shadow: inset 0px 0px 0px 0px  transparent; } }
+    box-shadow: inset 0px 0px 0px 0px transparent; } }
 
 @image-generate {
   type: mask;
@@ -2292,7 +2292,7 @@ select.edit option, select.editPrimary option {
   padding: 4px; }
 
 .panelHeader .label, .panelHeaderAlt .label, .panelFooter .label, .panelFooterAlt .label, .ctrlBarDis .label {
-  color: #9b9b9b; }
+  color: #9a9a9a; }
 
 .listItemSelected .label, .listItemHover .label, .gridRowSelected .label, .gridRowHover .label {
   color: rgba(255, 255, 255, 0.75); }
@@ -2506,7 +2506,7 @@ select.edit option, select.editPrimary option {
   background: #e8175d; }
 
 .listFocus {
-  border-color: #df8ba7; }
+  border-color: #de8ba7; }
 
 .listDisabled {
   color: gray;
@@ -2557,7 +2557,7 @@ select.edit option, select.editPrimary option {
   border-radius: 2px; }
 
 .treeFocus {
-  border-color: #df8ba7; }
+  border-color: #de8ba7; }
 
 .treeItem {
   display: flex;

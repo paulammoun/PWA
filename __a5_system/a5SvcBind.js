@@ -64,6 +64,7 @@ window.A5.ServiceHandler = Class.create({
                     }
 
                     // make auth and firestore references
+
                     obj.auth = fbInst.auth();
                     if( def.firebase.useEmulator ) {
                         obj.auth.useEmulator("http://localhost:9099/");
@@ -91,10 +92,6 @@ window.A5.ServiceHandler = Class.create({
                         });
                     }
 
-///////////////////////
-
-
-
 
                     fb.loaded = true;
                     for( var i = 0 ; i < fb.onAfterLoad.length ; ++i ) {
@@ -102,15 +99,37 @@ window.A5.ServiceHandler = Class.create({
                     }
                     fb.onAfterLoad = [];
                     //window.functions = fbInst.functions();
+                    //alert(24);
+                    //debugger;
                     if( obj.onAuthStateChanged ) {
                         obj.auth.onAuthStateChanged(user => {
                             obj.user = user;
+                            if(!obj.auth.currentUser) {
+								var e = {};
+								e.isLoggedIn = false;
+								e.userObject = false;
+								e.uid = false;
+								e.email = false;
+								e.refreshToken = false;
+								e.accessToken = false;
+							}
                             if( obj.auth.currentUser ) {
+								//alert(37);
+								var e = {};
+								e.userObject = obj.auth.currentUser
+								e.isLoggedIn = true;
+								e.uid = obj.auth.currentUser.uid
+								e.email = obj.auth.currentUser.email
+								e.refreshToken = obj.auth.currentUser.refreshToken;
+								//debugger;
+								e.accessToken = e.userObject.toJSON().stsTokenManager.accessToken
+								//token = obj.auth.currentUser.getStsTokenManager().accessToken
                                 obj.auth.currentUser.getIdTokenResult().then(
-                                    tok => obj.onAuthStateChanged(obj,tok.token)
+                                    tok => obj.onAuthStateChanged(e,tok.token)
                                 ).catch( err => obj.onAuthStateChanged(obj,null) );
                             } else {
-                                obj.onAuthStateChanged(obj,null);
+                                //obj.onAuthStateChanged(obj,null);
+                                obj.onAuthStateChanged(e,null);
                             }
                         });
                     }
@@ -347,8 +366,29 @@ window.A5.ServiceHandler = Class.create({
                                                      && property != '*renderIndex'
                                                      && property != '*rowGUID'
                                                      && property != '*value'
+                                                     && property != '_isDirty'
+                                                     && property != '_isDeleted'
+                                                     && property != '_isNewRow'
+                                                     && property != '__displayStyle'
+                                                     && property != '_oldData'
+                                                     && property != '*key'
+                                                     && property != '*renderIndex'
+                                                     && property != '*rowGUID'
+                                                     && property != '*value'
+                                                     && property != '_flagServerSideErrorInChild'
+													 && property != '__edit'
+													 && property != '_hasGlobalErrors'
+													 && property != '_writeConflictErrors'
+													 && property != '_flagWriteConflictErrorInChild'
+													 && property != '_hasServerSideError'
+													 && property != '_hasWriteConflictErrors'
+													 && property != '_serverSideErrors'
+													 && property != '_hasUnsyncedMediaFiles'
+													 && property != '_flagGlobalErrorInChild'
+  													 && property != '_dirtyImages'
+
                                                      ) {
-                                                        recData[property] = row[property];
+                                                        if(typeof row[property] != 'undefined') recData[property] = row[property];
                                                     }
                                                 }
                                                 collection.doc(row.__key__).set(recData).then(function() {
@@ -427,8 +467,29 @@ window.A5.ServiceHandler = Class.create({
         }
         return query;
     },
+
     __queryListLow: function(snapshot,_arguments) {
         var listData = [];
+
+		var _JSONSafeStringify =  function(obj) {
+			var result = {};
+			try{
+				result = JSON.stringify(obj)
+				return result;
+			}catch(e) {
+				for(n in obj) {
+					if(typeof obj[n] != 'object' || obj[n] == null) {
+						result[n] = obj[n];
+					} else {
+						//debugger;
+					}
+
+				}
+
+				result = JSON.stringify(result);
+				return result;
+			}
+		}
         var offset = 0;
         if( _arguments.offset && _arguments.offset > 0 ) {
             offset = _arguments.offset;
@@ -439,7 +500,7 @@ window.A5.ServiceHandler = Class.create({
                     if( offset > 0 ) {
                         --offset;
                     } else {
-                        var data = JSON.parse(JSON.stringify(doc.data()));
+                        var data = JSON.parse(_JSONSafeStringify(doc.data()));
                         data["__key__"] = doc.id
                         data = A5.ServiceHandleUtility.firebaseFixupData(data);
                         listData.push( data );
@@ -447,10 +508,18 @@ window.A5.ServiceHandler = Class.create({
                 });
             } else {
                 snapshot.docs.forEach(doc => {
-                    var data = JSON.parse(JSON.stringify(doc.data()));
-                    data["__key__"] = doc.id
-                    data = A5.ServiceHandleUtility.firebaseFixupData(data);
-                    listData.push( data );
+					try{
+						var _d = doc.data();
+
+						var _ds = _JSONSafeStringify(_d);
+						var data = JSON.parse(_ds);
+						data["__key__"] = doc.id
+						data = A5.ServiceHandleUtility.firebaseFixupData(data);
+						listData.push( data );
+					}catch(e) {
+
+					};
+
                 });
             }
         } else if( _arguments.keyOnly ) {
@@ -595,9 +664,15 @@ window.A5.ServiceHandler = Class.create({
             var obj = this.def.firebase;
             return new Promise((resolve, reject) => {
                 if( obj ) {
-                    obj.afterLoaded().then( function () {
-                            obj.auth.signOut().then(function() { resolve(); });
-                        });
+                    obj.afterLoaded()
+                    .then( function () {
+                            obj.auth.signOut().then(function() {
+
+								//obj.dialogObject.ajaxCallback('','','xbLogout');
+								resolve();
+							});
+                        })
+                    .catch(function(){ reject('Logout not handled 2');});
                 } else {
                     reject("Logout not handled");
                 }
