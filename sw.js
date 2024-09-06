@@ -1,7 +1,7 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'Amiga-PWA_pwa_cache-v-91.30';
-const dynamicCacheName = 'Amiga-PWA_pwa_dynamic_cache-v-91.30';
+const staticCacheName = 'Amiga-PWA_pwa_cache-v-91.33';
+const dynamicCacheName = 'Amiga-PWA_pwa_dynamic_cache-v-91.33';
 const dynamicCacheSize = 50;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
@@ -107,11 +107,12 @@ var filesToCache = [
 './arrows.png',
 './clearsearch2.png',
 './clock.png',
+'./deal.png',
 './doctor-consultation.png',
 './JS.js',
-'./listofinvoices.a5rpt',
 './listofreceipts.a5rpt',
 './manifest.json',
+'./planning_16759800.png',
 './rotate.png',
 './searchicon2.png',
 './shopping.png',
