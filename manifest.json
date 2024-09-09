@@ -47,7 +47,7 @@
     ],
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "hsl(303.08,76.47%,40%)",
+    "background_color": "hsl(351.54,76.47%,40%)",
     "theme_color": "hsl(0,0%,20%)"
 }
 
