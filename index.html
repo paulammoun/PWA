@@ -2011,25 +2011,25 @@ if(!ele2) {
 <div class="A5CWLayout" style="width: 33.33%" >
 	<label id="DLG1.LBL.R1.LSTITEMS_QTY" for="DLG1.V.R1.LSTITEMS_QTY" title="" class="label" style="display:block;">Qty</label>
 
-	<input	type="number" id="DLG1.V.R1.LSTITEMS_QTY" title=""     class="edit " style="text-align: right; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onBlur="mallowfree= DLG1_DlgObj.getValue('allowbonus'); DLG1_DlgObj.setValue('flagviewbonus',0); setTimeout(p,250); function p(){  mProdid = DLG1_DlgObj.getValue('list::LSTITEMS::id');  mQty = DLG1_DlgObj.getValue('lstitems_qty');  mPriceList = DLG1_DlgObj.getValue('pricelist');  var _onOffline = function() {  };  var _onServerNotAvailable = function() {   ;  };  var _onSuccess = function(data) {   if(data.length == 0){    DLG1_DlgObj.setValue('flagviewbonus',0);    return;   }    DLG1_DlgObj.setValue('flagviewbonus',1);   mPrice= data[0].price ;   mdisc = data[0].disc ;   mFreeItemId = data[0].freeitemid ;   mFreeItemTypeId = data[0].freeitemtype ;   mFreeQty = data[0].freeqty ;   refreshFreeItem(mFreeItemTypeId,mFreeItemId);   if(mallowfree=0){    DLG1_DlgObj.setValue('lstitems_bonusq',mFreeQty);   }   DLG1_DlgObj.setValue('lstitems_unitpr',mPrice);   DLG1_DlgObj.setValue('lstitems_discount',mdisc);  };  var _onFail = function() {  ;  };  var _filter = 'data.PRICELISTID == '+mPriceList+' && data.itemid == ' + mProdid + ' && data.fromqty <= '+mQty+' && data.toqty >= '+mQty;  var _order = '';  if(mPriceList != ''){   DLG1_DlgObj.getFromDataCache('prices',_onSuccess,_onFail,_filter,_order,_onOffline,_onServerNotAvailable);  } }" onFocus="setTimeout($(this).select(),300);" onchange="var tfunc = function() {onChange_lstitems_qty_d8795a24cfe244c88d3834d09830cbe0.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.LSTITEMS_QTY"    value=""    />
+	<input	type="number" id="DLG1.V.R1.LSTITEMS_QTY" title=""     class="edit " style="text-align: right; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onBlur="mallowfree= DLG1_DlgObj.getValue('allowbonus'); DLG1_DlgObj.setValue('flagviewbonus',0); setTimeout(p,250); function p(){  mProdid = DLG1_DlgObj.getValue('list::LSTITEMS::id');  mQty = DLG1_DlgObj.getValue('lstitems_qty');  mPriceList = DLG1_DlgObj.getValue('pricelist');  var _onOffline = function() {  };  var _onServerNotAvailable = function() {   ;  };  var _onSuccess = function(data) {   if(data.length == 0){    DLG1_DlgObj.setValue('flagviewbonus',0);    return;   }    DLG1_DlgObj.setValue('flagviewbonus',1);   mPrice= data[0].price ;   mdisc = data[0].disc ;   mFreeItemId = data[0].freeitemid ;   mFreeItemTypeId = data[0].freeitemtype ;   mFreeQty = data[0].freeqty ;   refreshFreeItem(mFreeItemTypeId,mFreeItemId);   if(mallowfree=0){    DLG1_DlgObj.setValue('lstitems_bonusq',mFreeQty);   }   DLG1_DlgObj.setValue('lstitems_unitpr',mPrice);   DLG1_DlgObj.setValue('lstitems_discount',mdisc);  };  var _onFail = function() {  ;  };  var _filter = 'data.PRICELISTID == '+mPriceList+' && data.itemid == ' + mProdid + ' && data.fromqty <= '+mQty+' && data.toqty >= '+mQty;  var _order = '';  if(mPriceList != ''){   DLG1_DlgObj.getFromDataCache('prices',_onSuccess,_onFail,_filter,_order,_onOffline,_onServerNotAvailable);  } }" onChange="var tfunc = function() {onChange_lstitems_qty_d8795a24cfe244c88d3834d09830cbe0.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );" onFocus="setTimeout($(this).select(),300);"   name="V.R1.LSTITEMS_QTY"    value=""    />
 
 </div>
 <div class="A5CWLayout" style="width: 33.33%" >
 	<label id="DLG1.LBL.R1.LSTITEMS_UNITPR" for="DLG1.V.R1.LSTITEMS_UNITPR" title="" class="label" style="display:block;">Unit Price</label>
 
-	<input	type="number" id="DLG1.V.R1.LSTITEMS_UNITPR" title=""     class="edit " style="text-align: right; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onFocus="$(this).select();" onchange="var tfunc = function() {onChange_lstitems_unitpr_0ceb521df3fa4052ac76cbbd0ebc4349.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.LSTITEMS_UNITPR"    value=""    />
+	<input	type="number" id="DLG1.V.R1.LSTITEMS_UNITPR" title=""     class="edit " style="text-align: right; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onChange="var tfunc = function() {onChange_lstitems_unitpr_0ceb521df3fa4052ac76cbbd0ebc4349.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );" onFocus="$(this).select();"   name="V.R1.LSTITEMS_UNITPR"    value=""    />
 
 </div>
 <div class="A5CWLayout" style="width: 33.33%" >
 	<label id="DLG1.LBL.R1.LSTITEMS_DISCOUNT" for="DLG1.V.R1.LSTITEMS_DISCOUNT" title="" class="label" style="display:block;">Discount</label>
 
-	<input	type="number" id="DLG1.V.R1.LSTITEMS_DISCOUNT" title=""     class="edit " style="text-align: right; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onFocus="$(this).select();" onchange="var tfunc = function() {onChange_lstitems_discount_9aee24e85bb24ac69ec712d23d379af4.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.LSTITEMS_DISCOUNT"    value=""    />
+	<input	type="number" id="DLG1.V.R1.LSTITEMS_DISCOUNT" title=""     class="edit " style="text-align: right; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onChange="var tfunc = function() {onChange_lstitems_discount_9aee24e85bb24ac69ec712d23d379af4.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );" onFocus="$(this).select();"   name="V.R1.LSTITEMS_DISCOUNT"    value=""    />
 
 </div><br  style="clear:both; " />
 <div class="A5CWLayout" style="width: 33.33%" >
 	<label id="DLG1.LBL.R1.LSTITEMS_BONUSQ" for="DLG1.V.R1.LSTITEMS_BONUSQ" title="" class="label" style="display:block;">Free Q.</label>
 
-	<input	type="number" id="DLG1.V.R1.LSTITEMS_BONUSQ" title=""     class="edit " style="text-align: right; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onFocus="setTimeout($(this).select(),300);" onchange="var tfunc = function() {onChange_lstitems_bonusq_bd8fe27c9fce4051ac3ba5f4b06e1b9d.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.LSTITEMS_BONUSQ"    value=""    />
+	<input	type="number" id="DLG1.V.R1.LSTITEMS_BONUSQ" title=""     class="edit " style="text-align: right; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onChange="var tfunc = function() {onChange_lstitems_bonusq_bd8fe27c9fce4051ac3ba5f4b06e1b9d.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );" onFocus="setTimeout($(this).select(),300);"   name="V.R1.LSTITEMS_BONUSQ"    value=""    />
 
 </div>
 <div class="A5CWLayout" style="width: 66.67%" >
@@ -2042,7 +2042,7 @@ if(!ele2) {
 		title=""
 		style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"
 		id="DLG1.V.R1.LSTITEMS_BONUSI"  
-		 onchange="var tfunc = function() {onChange_LSTITEMS_BONUSI_d2114c6ddea94c698aa318affdc4280d.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"  
+		 onChange="var tfunc = function() {onChange_LSTITEMS_BONUSI_d2114c6ddea94c698aa318affdc4280d.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"  
 		
 		
 		 >
@@ -2060,7 +2060,7 @@ if(!ele2) {
 		title=""
 		style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"
 		id="DLG1.V.R1.LITEITEMS_DISCUSSEDTYPE"  
-		 onchange="var tfunc = function() {onChange_liteitems_DiscussedType_f52387457aad435d8c70d528ae8ba7af.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"  
+		 onChange="var tfunc = function() {onChange_liteitems_DiscussedType_f52387457aad435d8c70d528ae8ba7af.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"  
 		
 		
 		 >
@@ -2071,7 +2071,7 @@ if(!ele2) {
 <div class="A5CWLayout" style="width: 100%" >
 	<label id="DLG1.LBL.R1.LISTITEMS_DISCUSSEDCOMENT" for="DLG1.V.R1.LISTITEMS_DISCUSSEDCOMENT" title="" class="label" style="display:block;">Discussed Coment</label>
 
-	<textarea	id="DLG1.V.R1.LISTITEMS_DISCUSSEDCOMENT" class="edit " title="" style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" rows="2" cols="20"  onchange="var tfunc = function() {onChange_listitems_DiscussedComent_e6e8815b512c45da98cf899734164e2a.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.LISTITEMS_DISCUSSEDCOMENT"  ></textarea>
+	<textarea	id="DLG1.V.R1.LISTITEMS_DISCUSSEDCOMENT" class="edit " title="" style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" rows="2" cols="20"  onChange="var tfunc = function() {onChange_listitems_DiscussedComent_e6e8815b512c45da98cf899734164e2a.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.LISTITEMS_DISCUSSEDCOMENT"  ></textarea>
 
 </div>
 <div style="display:none;font: 0pt arial;clear:both;"></div>
@@ -2088,7 +2088,7 @@ if(!ele2) {
 	<br  id="DLG1.V.R1.CONTAINER_243.BREAK"  style="clear:both; " />
 <div class="A5CWLayout" style="width: 2in" >
 	<label id="DLG1.LBL.R1.FLAGVIEWBONUS" for="DLG1.V.R1.FLAGVIEWBONUS" title="" class="label" style="float: left; width: 1in; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;">Flagviewbonus</label>
-<div style="margin-left: 1in ;"><input	type="text" id="DLG1.V.R1.FLAGVIEWBONUS" title=""     class="edit " style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onchange="var tfunc = function() {onChange_flagviewbonus_4e9c20000f264745ad8b0d69402584fa.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.FLAGVIEWBONUS"    value=""    />
+<div style="margin-left: 1in ;"><input	type="text" id="DLG1.V.R1.FLAGVIEWBONUS" title=""     class="edit " style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onChange="var tfunc = function() {onChange_flagviewbonus_4e9c20000f264745ad8b0d69402584fa.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.FLAGVIEWBONUS"    value=""    />
 </div>
 </div>
 <div style="display:none;font: 0pt arial;clear:both;"></div>
@@ -2502,7 +2502,7 @@ if(typeof DLG1_DlgObj == 'object') {
 		html: '<div style="display:none;"></div>'
 	},
 	footer: {
-		html: '<div style="display:table; margin:auto;"><div class="A5CWLayout" style="width: " >  <div id="DLG1.V.R1.STATICTEXT_8" title=""  class="" style="font-size: 7pt; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   ><strong>Copyright 2019-2024 PCS  Version 1.2.6 (build ) 12</strong></div> </div> </div>',
+		html: '<div style="display:table; margin:auto;"><div class="A5CWLayout" style="width: " >  <div id="DLG1.V.R1.STATICTEXT_8" title=""  class="" style="font-size: 7pt; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   ><strong>Copyright 2019-2024 PCS  Version 1.2.6 (build ) 13</strong></div> </div> </div>',
 		show: true
 	},
 	overlay: {
@@ -37333,7 +37333,8 @@ mvtype=DLG1_DlgObj.getValue('VisitType');
 mobjective=DLG1_DlgObj.getValue('VisitObjective');
 mcoment=DLG1_DlgObj.getValue('Coment');
 mvSecurity = DLG1_DlgObj.getValue('vSecurity');
-if(mvSecurity == "1" || mvSecurity == "3") {
+mPhonerder = DLG1_DlgObj.getValue('phoneorder');
+if((mvSecurity == "1" || mvSecurity == "3") && mPhonerder == 0) {
  if(mvtype==0 || mvtype=='' || mobjective==0 ||  mobjective=='' || mcoment==''){
   alert('make sure all mandatory fields are filled');
   return;
@@ -41384,7 +41385,7 @@ DLG1_DlgObj.createWindow('DLG1_CONTAINERWINDOW_WINDOW_17','modal',
 		},
 		style: 'background-color: hsl(0,0%,90.2%);'
 	},
-	height: '3in',
+	height: '4in',
 	width: '100%',
 	title: {
 		html: 'Data Entry',
@@ -59314,7 +59315,7 @@ DLG1_DlgObj.__info = {
 	"dateCreated": "2018-10-14",
 	"dateLastEdited": "2024-9-9",
 	"comments": "",
-	"revisionnumber": 1904
+	"revisionnumber": 1905
 }
 A5.__csdfmt = (obj) =>{ if(obj) return obj.stateInfo.__dtfmt};DLG1_DlgObj._workingPreview = false;
 $u.decimal = '.';
