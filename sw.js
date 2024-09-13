@@ -1,7 +1,7 @@
 // **Template code last revised: 08/30/21
 
-const staticCacheName = 'Amiga-PWA_pwa_cache-v-91.41';
-const dynamicCacheName = 'Amiga-PWA_pwa_dynamic_cache-v-91.41';
+const staticCacheName = 'Amiga-PWA_pwa_cache-v-91.44';
+const dynamicCacheName = 'Amiga-PWA_pwa_dynamic_cache-v-91.43';
 const dynamicCacheSize = 15;
 const offlineFilename = './offline.html';
 const showDebugInfo = true;
@@ -103,14 +103,18 @@ var filesToCache = [
 './javascript/A5jQueryWithUI.js',
 './javascript/a5_url.js',
 './svg/AASVG.js',
+'./alert.png',
 './Amiga_logo_pcs_CroppedXS.png',
 './arrows.png',
 './clearsearch2.png',
 './clock.png',
 './deal.png',
 './doctor-consultation.png',
+'./hight.png',
 './JS.js',
+'./low.png',
 './manifest.json',
+'./medium.png',
 './phoneorder.png',
 './planning_16759800.png',
 './rotate.png',
@@ -178,6 +182,7 @@ self.addEventListener('fetch', evt => {
   if (usingOneSignalPush) {
   	requests.push('sdks');
   	requests.push('apis');	
+  	requests.push('onesignal.com');	
   }
   
  const makeRequest = requests.every(request => {
