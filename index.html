@@ -2502,7 +2502,7 @@ if(typeof DLG1_DlgObj == 'object') {
 		html: '<div style="display:none;"></div>'
 	},
 	footer: {
-		html: '<div style="display:table; margin:auto;"><div class="A5CWLayout" style="width: " >  <div id="DLG1.V.R1.STATICTEXT_8" title=""  class="" style="font-size: 7pt; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   ><strong>Copyright 2019-2024 PCS  Version 1.2.6 (build ) 18</strong></div> </div> </div>',
+		html: '<div style="display:table; margin:auto;"><div class="A5CWLayout" style="width: " >  <div id="DLG1.V.R1.STATICTEXT_8" title=""  class="" style="font-size: 7pt; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"   ><strong>Copyright 2019-2024 PCS  Version 1.2.6 (build ) 19</strong></div> </div> </div>',
 		show: true
 	},
 	overlay: {
@@ -4770,7 +4770,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"SPECIALREQUEST": "",
 	"COMENT": "",
 	"TEST1": "0",
-	"TEST2": "16/09/2024",
+	"TEST2": "17/09/2024",
 	"LSTVISITHEAD": "",
 	"DEVLAT": "",
 	"DEVLONG": "",
@@ -4919,7 +4919,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"LSTGEOLOC": "",
 	"MEDREP": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
 	"MEDREP_1": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
-	"DATE": "16/09/2024",
+	"DATE": "17/09/2024",
 	"PASSOK": "0",
 	"SYNCINPROGRESS": "0",
 	"SAVING": "0",
@@ -4960,7 +4960,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"SPECIALREQUEST": "",
 	"COMENT": "",
 	"TEST1": "0",
-	"TEST2": "16/09/2024",
+	"TEST2": "17/09/2024",
 	"LSTVISITHEAD": "",
 	"DEVLAT": "",
 	"DEVLONG": "",
@@ -5109,7 +5109,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"LSTGEOLOC": "",
 	"MEDREP": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
 	"MEDREP_1": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
-	"DATE": "16/09/2024",
+	"DATE": "17/09/2024",
 	"PASSOK": "0",
 	"SYNCINPROGRESS": "0",
 	"SAVING": "0",
@@ -43658,7 +43658,9 @@ if(runMethod.toLowerCase() != 'ajax'  && typeof window['PRECOMPUTEDUX_dc182101e4
 }
 }
 window['DLG1_ACTION_OpenListOfOrders'] = function(rowNum,rowId,objEle) {
-var runMethod = 'ajax';
+var runMethod = 'precomputed';
+if(DLG1_DlgObj._embeddedMode) runMethod = 'ajax';
+if(DLG1_DlgObj._staticHTMLMode) runMethod = 'precomputed';
 if(runMethod == 'ajax') {
 if(typeof DLG1_DlgObj._onlineStatus != 'undefined') { 
 	if(DLG1_DlgObj._onlineStatus == 'offline') { 
@@ -43674,7 +43676,7 @@ go.ajaxCallbackTimeout = DLG1_DlgObj.ajaxCallbackTimeout;
 go.objectId = objEle.id;
 go.dialog2Name = 'listofOrders';
 go.type = 'dialog2';
-go.alias = 'DLG1_LISTOFORDE_CBDI';;
+go.alias = 'DLG1_LISTOFORDE_DFFI';;
 go.submitCurrentFieldValues = true;
 go.sourceGridPart = 'O';
 go.sourceGridRowNumber = '1';
@@ -43706,7 +43708,33 @@ var flagCachedUX = false
 if(!obj || !flagCachedUX ) { 
 	//alert('initial render');
 	$('panelId').innerHTML = '<div style=\'\'  id=\'GRIDDIV_panelId\'></div>'; 
-	A5.component.runGenericComponent(go);if(typeof __showWaitMessage != 'undefined') __showWaitMessage.call();;
+	var runMethod = 'precomputed';
+if(DLG1_DlgObj._embeddedMode) runMethod = 'ajax';
+if(DLG1_DlgObj._staticHTMLMode) runMethod = 'precomputed';
+if(runMethod == 'ajax')if(typeof __showWaitMessage != 'undefined') __showWaitMessage.call()
+if(runMethod.toLowerCase() != 'ajax'  && typeof window['PRECOMPUTEDUX_bbeac181038e48bb93edc34e1965da7f_listofOrders'] == 'function') { 
+	//PRECOMPUTED_UX_COMPONENT: {functionName: 'PRECOMPUTEDUX_bbeac181038e48bb93edc34e1965da7f_listofOrders', uxname: 'listofOrders', alias: 'DLG1_LISTOFORDE_DFFI'}
+	var jsToRun = PRECOMPUTEDUX_bbeac181038e48bb93edc34e1965da7f_listofOrders(go);
+	eval(jsToRun);
+	//must run code to initialize values
+	try{
+		var objx = window[go.alias.toUpperCase() + '_DlgObj'];
+		objx.populate(objx.originalValues[0]);
+	}catch(e) {};
+	if(typeof go.onLoadCompleteJavascript != 'undefined') { 
+		var txt = go.onLoadCompleteJavascript.split(':')[1];
+		if(typeof txt != 'undefined') { 
+			if(typeof DLG1_DlgObj._ajaxCallbackCompleteCode != 'undefined') { 
+				setTimeout(function() { 
+					DLG1_DlgObj._ajaxCallbackCompleteCode[txt].call();
+				},500);
+			}
+		}
+	}
+} else {
+	A5.component.runGenericComponent(go)
+}
+;
 }else { 
 	//alert('refresh');
 	if(typeof go.specialDialogMode == 'undefined') go.specialDialogMode = 'refreshUX'
@@ -62517,9 +62545,9 @@ DLG1_DlgObj.__info = {
 	"createdBy": "Paul",
 	"lastUpdatedBy": "",
 	"dateCreated": "2018-10-14",
-	"dateLastEdited": "2024-9-16",
+	"dateLastEdited": "2024-9-17",
 	"comments": "",
-	"revisionnumber": 1921
+	"revisionnumber": 1923
 }
 A5.__csdfmt = (obj) =>{ if(obj) return obj.stateInfo.__dtfmt};DLG1_DlgObj._workingPreview = false;
 $u.decimal = '.';
@@ -64988,7 +65016,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n16/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n17/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65081,7 +65109,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n16/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n17/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = 'Description';
 		
 		var flagPersist = false;
@@ -65149,7 +65177,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n16/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n17/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = 'Description';
 		
 		var flagPersist = false;
@@ -65196,7 +65224,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  medred_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n16/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n17/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65237,7 +65265,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  medred_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n16/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n17/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65314,7 +65342,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n16/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n17/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65393,7 +65421,7 @@ if(listObj) listObj._state.paginated = true;
 if(listObj) listObj._state._optimizedJSON = false;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  user_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n16/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n17/09/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -66222,7 +66250,7 @@ DLG1_DlgObj.initialized = true;
 
 
 
-;DLG1_DlgObj.setStateInfo({ 	__args_n_MMEDREPID: '0', 	__args_n_POIDID: '0', 	__args_n_MPOIID: '0', 	__args_d_MDATE: '16/09/2024', 	__args_n_LOADTYPE: '0', 	__args_n_MCOMPID: '0', 	__args_n_SYNCINPROGRESS: '0', 	__args_n_MREPID: '0', 	__args_d_MTDATE: '', 	__args_n_SHOWALLDAYINPLAN: '0', 	__args_n_MREPID_1: '0', 	argValuesENC: '7C3tO+HPao0zNV11hCNhkXROUiAe0lvZWY7Xx6LngtmeYNlvKd03vaMUf1FQyyDMHkaLn31fVytMkjMWFQJW2XqMjeADGi+MZr5vQEverln7vv/ExOy11CO5U6OCKIW5xk/RPtEPTtoOVNhxj0pbYy2C4PkYUBPJsvsEqqItXGIck9SmAvmmbOvmG5aSAP1YIznXzd60mLhniYduNJpzP1tCA3G78wxLSI4L16kXCiKEKjFPFpEnroAO+O2E+M/KDfe2uLo4IkyflYJWPVZt7rebodv5dHUa0J/wWILTPIfKYNiNX1aERGc6D7DZcaSyCEDhVCUtW0bWUJdSZcOTTMS1yMlmTkfzHPxIh28nwravktGu+/pxy1HmADiyWQs1CUkrQYpYkZWPE2PoS5ogM2F6hn5LaPrrz/ZG+8LUd0tpP6lEFe7y2A==', 	__debugInfo: 'ssi-6014' });//ssi-6014;
+;DLG1_DlgObj.setStateInfo({ 	__args_n_MMEDREPID: '0', 	__args_n_POIDID: '0', 	__args_n_MPOIID: '0', 	__args_d_MDATE: '17/09/2024', 	__args_n_LOADTYPE: '0', 	__args_n_MCOMPID: '0', 	__args_n_SYNCINPROGRESS: '0', 	__args_n_MREPID: '0', 	__args_d_MTDATE: '', 	__args_n_SHOWALLDAYINPLAN: '0', 	__args_n_MREPID_1: '0', 	argValuesENC: '7C3tO+HPao0zNV11hCNhkXROUiAe0lvZWY7Xx6LngtmeYNlvKd03vaMUf1FQyyDMHkaLn31fVytMkjMWFQJW2XqMjeADGi+MZr5vQEverln7vv/ExOy11CO5U6OCKIW5xk/RPtEPTtpwZDoCBxqvH9UIzsC4C6TLTxs3BEexBvDePCtfU2X7A4dAHU5RS+/LqZ0GRwl/bnEluxygssocYVia/ESjg7ItVUMZvxm1c1FKn6rm6kvI/GEF9nMBWV07tZ6gOC5QKX2cczq3qnJd5d0npGd3oh1krvBja/GWSlap+gg/3ZGc7xSagXT+Dc5EHzuH+sscVK50Sit179jclJlKbDm45m3BGtBcSct/6Oh97SqiIF7VDL2QmVPNU5ZzgQuHNgLRvovhAOGCgTYWPUP5VwuJ6uUKQHmwIjM+OxQf7dOFMkWX5Q==', 	__debugInfo: 'ssi-6014' });//ssi-6014;
 ;
 
 
