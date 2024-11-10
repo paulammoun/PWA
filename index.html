@@ -1687,7 +1687,7 @@ if(!ele2) {
 <div class="A5CWLayout" style="width: 2in" >
 	<label id="DLG1.LBL.R1.NEWPASSWORD" for="DLG1.V.R1.NEWPASSWORD" title="" class="label" style="display:block;">newpassword</label>
 
-	<input	type="text" id="DLG1.V.R1.NEWPASSWORD" title=""     class="edit " style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onchange="var tfunc = function() {onChange_newpassword_f59f969e845440a491b959c89cc80053.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.NEWPASSWORD"    value=""    />
+	<input	type="text" id="DLG1.V.R1.NEWPASSWORD" title=""     class="edit " style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;"  onChange="var tfunc = function() {onChange_newpassword_f59f969e845440a491b959c89cc80053.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.NEWPASSWORD"    value=""    />
 
 </div><br  style="clear:both; " />
 <div class="A5CWLayout" style="width: " >
@@ -4773,7 +4773,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"SPECIALREQUEST": "",
 	"COMENT": "",
 	"TEST1": "0",
-	"TEST2": "12/10/2024",
+	"TEST2": "10/11/2024",
 	"LSTVISITHEAD": "",
 	"DEVLAT": "",
 	"DEVLONG": "",
@@ -4922,7 +4922,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"LSTGEOLOC": "",
 	"MEDREP": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
 	"MEDREP_1": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
-	"DATE": "12/10/2024",
+	"DATE": "10/11/2024",
 	"PASSOK": "0",
 	"SYNCINPROGRESS": "0",
 	"SAVING": "0",
@@ -4963,7 +4963,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"SPECIALREQUEST": "",
 	"COMENT": "",
 	"TEST1": "0",
-	"TEST2": "12/10/2024",
+	"TEST2": "10/11/2024",
 	"LSTVISITHEAD": "",
 	"DEVLAT": "",
 	"DEVLONG": "",
@@ -5112,7 +5112,7 @@ var DLG1_DlgObj = new A5.DialogComponentHelper('DLG1',{
 	"LSTGEOLOC": "",
 	"MEDREP": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
 	"MEDREP_1": "Invalid expression: convert_number(\"\"+convert_type(a,\"N\"))",
-	"DATE": "12/10/2024",
+	"DATE": "10/11/2024",
 	"PASSOK": "0",
 	"SYNCINPROGRESS": "0",
 	"SAVING": "0",
@@ -5197,19 +5197,9 @@ DLG1_DlgObj.readDataCacheItems('medreps',_doner1);
 		onRenderComplete: function(e) {
 console.log('entered on render complete');
 setTimeout(function(){
-	const tdate = new Date();
-	var thed = tdate.toFormat('dd/MM/yyyy');
-	DLG1_DlgObj.setValue('Date',thed);
-	mcp1 = DLG1_DlgObj.getValue('CompanyCode');
-	mcp2 = DLG1_DlgObj.getValue('CompanyName');
-	console.log(mcp1);
-	console.log(mcp2);
-	if (mcp1=='' || mcp2 == '')  {
-		console.log('ff');
-			var frameId = 'FRAME_1';
-			var frameState = 'open';
-			DLG1_DlgObj.frameOpenStateChange(frameId, frameState);		
-		}
+ const tdate = new Date();
+ var thed = tdate.toFormat('dd/MM/yyyy');
+ DLG1_DlgObj.setValue('Date',thed);
 },500)
 		},
 		onAndroidBackButton: function(e) {
@@ -44180,6 +44170,9 @@ DLG1_DlgObj.createWindow('DLG1_CONTAINERWINDOW_WINDOW_16','modal-resizable',
 	title: {
 		html: 'Change Password',
 		show: true,
+		tools: {
+			items: false
+		},
 		location: 'top',
 		direction: 'ltr'
 	},
@@ -62559,7 +62552,7 @@ DLG1_DlgObj._listsWithDependentTFControls = DLG1_DlgObj._listsWithDependentTFCon
 DLG1_DlgObj.__r = [];
 var ele2 = $('DLG1.R1'); if(ele2) {
 var ele = document.createElement('div');
-ele.innerHTML = '\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.MEDREPCODE" title=""     class="[theme:edit.base.className|class.dialogInput] " style="text-align: right; width: 25%; "  onBlur="DLG1_DlgObj.setValueFrom(\'MedRep\',\'medrepcode\');" onchange="var tfunc = function() {onChange_medrepcode_272e1a4ce97140d4baa1be74abb68faf.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.MEDREPCODE"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.SAVING" title=""     class="[theme:edit.base.className|class.dialogInput] " style="text-align: right; width: 1%; "  onchange="var tfunc = function() {onChange_saving_423437b528f5462ba787fb9d115f3768.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.SAVING"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.CHANGEPASS" title=""     class="[theme:edit.base.className|class.dialogInput] " style="text-align: right; "  onchange="var tfunc = function() {onChange_changepass_7c4c548485644520ba8822a57b751b55.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.CHANGEPASS"    value=""    />\n</span>\n</div>\n\n\n\n\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.TEST2" title=""     class="[theme:edit.base.className|class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_test2_e40b869910fb4048ad3c0853a4491c2f.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.TEST2"    value=""    />\n</span>\n</div>\n\n<div style="display:none;"><span><table id="DLG1.V.R1.STARTTIME.CONTAINER" cellspacing="0" cellpadding="0" class="[theme:editButtonGroup.base.container.className|Alpha-MagentaEditBG]" style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;; display: inline-table; white-space:normal; ">\n<tr>\n<td style="width:100%">\n\t<input  \tid="DLG1.V.R1.STARTTIME" name="V.R1.STARTTIME"  value=""  autocomplete="off"   size="200" class="[class.dialogInput]" style="width: 100%; ; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" />\n\t\n</td>\n\t</tr>\n</table>\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.DATE_1" title=""     class="[class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_date_1_a390822e914a46849a7012ec0273d7f3.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.DATE_1"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.PINISVALID" title=""     class="[theme:edit.base.className|class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_pinisvalid_a93f4ff9ea914a0081e8251841faac61.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.PINISVALID"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.VACATION_MEDREP" title=""     class="[theme:edit.base.className|class.dialogInput] " style="width: 100%; "  onchange="var tfunc = function() {onChange_vacation_medrep_70c34b7937834ef4b9e7907c72106767.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.VACATION_MEDREP"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.VACATION_COMPANY_ID" title=""     class="[theme:edit.base.className|class.dialogInput] " style="width: 100%; "  onchange="var tfunc = function() {onChange_vacation_company_id_30e0db0a676d402eb53bf202ed4f5cc5.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.VACATION_COMPANY_ID"    value=""    />\n</span>\n</div>\n\n\n\n\n\n\n\n\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.ID_3" title=""     class="[class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_id_3_c33f2e84d4b846e1b2adcd067fce732c.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.ID_3"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.VISITFK" title=""     class="[class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_visitfk_6fe86094678f42caac3e53d4847583a1.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.VISITFK"    value=""    />\n</span>\n</div>\n\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.AVAILABLE_MEDIA1" title=""     class="[class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_AVAILABLE_MEDIA1_8b1ff9aa084e4d5c8adbe5799defc85c.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.AVAILABLE_MEDIA1"    value=""    />\n</span>\n</div>\n\n\n\n<div style="display:none;"><span><!--JSControlStart--><input type="hidden" id="DLG1.V.R1.LSTPOI" name="V.R1.LSTPOI" /><!--JSControlEnd-->\n<div   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LSTPOI.CONTROL"  class="DLG1_LSTPOI" style="overflow: auto; width: 100%; height: 3in; "></div>\n</div>\n</span>\n</div>\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.MEDREP_ID" title=""     class="[theme:edit.base.className|class.dialogInput] " style="width: 66.67%; "  onchange="var tfunc = function() {onChange_medrep_id_b4f2fc2cf2bb4971ac4ea801f9b4ef07.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.MEDREP_ID"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.COMPANY_ID" title=""     class="[theme:edit.base.className|class.dialogInput] " style="width: 66.67%; "  onchange="var tfunc = function() {onChange_company_id_9464100e0dd247358e6852cdca5f9dbc.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.COMPANY_ID"    value=""    />\n</span>\n</div>\n\n\n\n<div style="display:none;"><span><!--JSControlStart--><input type="hidden" id="DLG1.V.R1.LSTDEALS" name="V.R1.LSTDEALS" /><!--JSControlEnd-->\n<div   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LSTDEALS.CONTROL"  class="DLG1_LSTDEALS" style="overflow: auto; width: 100%; height: 3in; "></div>\n</div>\n</span>\n</div>\n\n\n\n';
+ele.innerHTML = '\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.MEDREPCODE" title=""     class="[theme:edit.base.className|class.dialogInput] " style="text-align: right; width: 25%; "  onBlur="DLG1_DlgObj.setValueFrom(\'MedRep\',\'medrepcode\');" onchange="var tfunc = function() {onChange_medrepcode_272e1a4ce97140d4baa1be74abb68faf.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.MEDREPCODE"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.SAVING" title=""     class="[theme:edit.base.className|class.dialogInput] " style="text-align: right; width: 1%; "  onchange="var tfunc = function() {onChange_saving_423437b528f5462ba787fb9d115f3768.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.SAVING"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.CHANGEPASS" title=""     class="[theme:edit.base.className|class.dialogInput] " style="text-align: right; "  onChange="var tfunc = function() {onChange_changepass_7c4c548485644520ba8822a57b751b55.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.CHANGEPASS"    value=""    />\n</span>\n</div>\n\n\n\n\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.TEST2" title=""     class="[theme:edit.base.className|class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_test2_e40b869910fb4048ad3c0853a4491c2f.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.TEST2"    value=""    />\n</span>\n</div>\n\n<div style="display:none;"><span><table id="DLG1.V.R1.STARTTIME.CONTAINER" cellspacing="0" cellpadding="0" class="[theme:editButtonGroup.base.container.className|Alpha-MagentaEditBG]" style="width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;; display: inline-table; white-space:normal; ">\n<tr>\n<td style="width:100%">\n\t<input  \tid="DLG1.V.R1.STARTTIME" name="V.R1.STARTTIME"  value=""  autocomplete="off"   size="200" class="[class.dialogInput]" style="width: 100%; ; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;" />\n\t\n</td>\n\t</tr>\n</table>\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.DATE_1" title=""     class="[class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_date_1_a390822e914a46849a7012ec0273d7f3.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.DATE_1"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.PINISVALID" title=""     class="[theme:edit.base.className|class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_pinisvalid_a93f4ff9ea914a0081e8251841faac61.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.PINISVALID"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.VACATION_MEDREP" title=""     class="[theme:edit.base.className|class.dialogInput] " style="width: 100%; "  onchange="var tfunc = function() {onChange_vacation_medrep_70c34b7937834ef4b9e7907c72106767.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.VACATION_MEDREP"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.VACATION_COMPANY_ID" title=""     class="[theme:edit.base.className|class.dialogInput] " style="width: 100%; "  onchange="var tfunc = function() {onChange_vacation_company_id_30e0db0a676d402eb53bf202ed4f5cc5.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.VACATION_COMPANY_ID"    value=""    />\n</span>\n</div>\n\n\n\n\n\n\n\n\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.ID_3" title=""     class="[class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_id_3_c33f2e84d4b846e1b2adcd067fce732c.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.ID_3"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.VISITFK" title=""     class="[class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_visitfk_6fe86094678f42caac3e53d4847583a1.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.VISITFK"    value=""    />\n</span>\n</div>\n\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.AVAILABLE_MEDIA1" title=""     class="[class.dialogInput] " style=""  onchange="var tfunc = function() {onChange_AVAILABLE_MEDIA1_8b1ff9aa084e4d5c8adbe5799defc85c.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.AVAILABLE_MEDIA1"    value=""    />\n</span>\n</div>\n\n\n\n<div style="display:none;"><span><!--JSControlStart--><input type="hidden" id="DLG1.V.R1.LSTPOI" name="V.R1.LSTPOI" /><!--JSControlEnd-->\n<div   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LSTPOI.CONTROL"  class="DLG1_LSTPOI" style="overflow: auto; width: 100%; height: 3in; "></div>\n</div>\n</span>\n</div>\n<div style="display:none;"><span><input\ttype="text" id="DLG1.V.R1.MEDREP_ID" title=""     class="[theme:edit.base.className|class.dialogInput] " style="width: 66.67%; "  onchange="var tfunc = function() {onChange_medrep_id_b4f2fc2cf2bb4971ac4ea801f9b4ef07.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.MEDREP_ID"    value=""    />\n</span>\n<span><input\ttype="text" id="DLG1.V.R1.COMPANY_ID" title=""     class="[theme:edit.base.className|class.dialogInput] " style="width: 66.67%; "  onchange="var tfunc = function() {onChange_company_id_9464100e0dd247358e6852cdca5f9dbc.call(this,DLG1_DlgObj);;}; var tscope = this; setTimeout(function() { if(tscope) { tfunc.call(tscope);} delete tscope;},1 );"   name="V.R1.COMPANY_ID"    value=""    />\n</span>\n</div>\n\n\n\n<div style="display:none;"><span><!--JSControlStart--><input type="hidden" id="DLG1.V.R1.LSTDEALS" name="V.R1.LSTDEALS" /><!--JSControlEnd-->\n<div   style="padding:0px; "  >\n\t<div id="DLG1.V.R1.LSTDEALS.CONTROL"  class="DLG1_LSTDEALS" style="overflow: auto; width: 100%; height: 3in; "></div>\n</div>\n</span>\n</div>\n\n\n\n';
 ele2.appendChild(ele);
 };
 window.__preventDefault = function(event) { event.preventDefault()};
@@ -62606,9 +62599,9 @@ DLG1_DlgObj.__info = {
 	"createdBy": "Paul",
 	"lastUpdatedBy": "",
 	"dateCreated": "2018-10-14",
-	"dateLastEdited": "2024-10-12",
+	"dateLastEdited": "2024-11-10",
 	"comments": "",
-	"revisionnumber": 1947
+	"revisionnumber": 1949
 }
 A5.__csdfmt = (obj) =>{ if(obj) return obj.stateInfo.__dtfmt};DLG1_DlgObj._workingPreview = false;
 $u.decimal = '.';
@@ -65089,7 +65082,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n12/10/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n10/11/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65182,7 +65175,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n12/10/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n10/11/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = 'Description';
 		
 		var flagPersist = false;
@@ -65250,7 +65243,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n12/10/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n10/11/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = 'Description';
 		
 		var flagPersist = false;
@@ -65287,8 +65280,8 @@ if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
 var listObj = DLG1_DlgObj.getControl('LSTVACATION');
-if(listObj) listObj._state.recordCount = 12;
-if(listObj) listObj._state.recordCountFormatted = '12';
+if(listObj) listObj._state.recordCount = 13;
+if(listObj) listObj._state.recordCountFormatted = '13';
 if(listObj) listObj._state.lastBreakValue = '<None>';
 if(listObj) listObj._state.pageCount = 1;
 if(listObj) listObj._state.pageSize = 20;
@@ -65297,7 +65290,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  medred_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n12/10/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n10/11/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65338,7 +65331,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  medred_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n12/10/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n10/11/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65408,8 +65401,8 @@ if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
 var listObj = DLG1_DlgObj.getControl('LSTDEALS');
-if(listObj) listObj._state.recordCount = 7;
-if(listObj) listObj._state.recordCountFormatted = '7';
+if(listObj) listObj._state.recordCount = 8;
+if(listObj) listObj._state.recordCountFormatted = '8';
 if(listObj) listObj._state.lastBreakValue = '<None>';
 if(listObj) listObj._state.pageCount = 1;
 if(listObj) listObj._state.pageSize = 20;
@@ -65418,7 +65411,7 @@ if(listObj) listObj._state.paginated = false;
 if(listObj) listObj._state._optimizedJSON = true;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = '';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n12/10/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n10/11/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65487,17 +65480,17 @@ if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
 var listObj = DLG1_DlgObj.getControl('LSTGEOLOC');
-if(listObj) listObj._state.recordCount = 0;
-if(listObj) listObj._state.recordCountFormatted = '0';
+if(listObj) listObj._state.recordCount = 1;
+if(listObj) listObj._state.recordCountFormatted = '1';
 if(listObj) listObj._state.lastBreakValue = '';
-if(listObj) listObj._state.pageCount = 0;
+if(listObj) listObj._state.pageCount = 1;
 if(listObj) listObj._state.pageSize = 20;
 if(listObj) {var ele = $('DLG1.lstgeoloc.RECORDCOUNT'); if(ele) ele.innerHTML = listObj._state.recordCountFormatted;};
 if(listObj) listObj._state.paginated = true;
 if(listObj) listObj._state._optimizedJSON = false;
 if(listObj) listObj._state.highlight = {  };
 if(listObj) listObj._state.whereClause = 'company_id = :MCOMPID  AND  user_id = :MMEDREPID';
-if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n12/10/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
+if(listObj) listObj._state.whereParameters = '0|||N|MMEDREPID\n0|||N|POIDID\n0|||N|MPOIID\n10/11/2024|||D|MDATE\n0|||N|LOADTYPE\n0|||N|MCOMPID\n0|||N|SYNCINPROGRESS\n0|||N|MREPID\n|||D|MTDATE\n0|||N|SHOWALLDAYINPLAN\n0|||N|MREPID_1\n';
 listObj._state.order = '';
 		
 		var flagPersist = false;
@@ -65510,10 +65503,10 @@ listObj._state.order = '';
 		
 		
 ;
-if(listObj) listObj._state.pageCount = 0;
+if(listObj) listObj._state.pageCount = 1;
 if(listObj) listObj.setDisplay('content-footer',false);
 DLG1_DlgObj._list_executeEvent('LSTGEOLOC','afterRenderComplete',{});
-
+listObj._recordNavigatorLinks = ['1'];
 if(listObj._refreshStateMessages) listObj._refreshStateMessages();
 
 
@@ -66319,7 +66312,7 @@ DLG1_DlgObj.initialized = true;
 
 
 
-;DLG1_DlgObj.setStateInfo({ 	__args_n_MMEDREPID: '0', 	__args_n_POIDID: '0', 	__args_n_MPOIID: '0', 	__args_d_MDATE: '12/10/2024', 	__args_n_LOADTYPE: '0', 	__args_n_MCOMPID: '0', 	__args_n_SYNCINPROGRESS: '0', 	__args_n_MREPID: '0', 	__args_d_MTDATE: '', 	__args_n_SHOWALLDAYINPLAN: '0', 	__args_n_MREPID_1: '0', 	argValuesENC: '7C3tO+HPao0zNV11hCNhkXROUiAe0lvZWY7Xx6LngtmeYNlvKd03vaMUf1FQyyDMHkaLn31fVytMkjMWFQJW2XqMjeADGi+MZr5vQEverln7vv/ExOy11CO5U6OCKIW5xk/RPtEPTtqu5QGZ8Yhh0FQzcyyuamN+OiY/cf9208bEx+UXaaNy1DgF7ZiBq6b2kNOhN2zkT5v8SsKv88DcXrnkNEgX+Kd5I6wEL1oZajuZfeWTxJGhBzEQC7D/wJIUO1GXQ9e3hrgXrEnm45Cg7ly9glJPtImZZjQ9Ahap/IQwSryVW/hFVZ7T3Dn5uO2yoVRCjJCMlppsAGPOktYZWsalidLoiPWk2E5JETwGtL5Loh8alfphOl6eqHSK5GojVkRXtQ7gU0I14wtm6g5vlTCGt1fXxxKDZrYOy7rwf2lozSrTdDsmKA==', 	__debugInfo: 'ssi-6014' });//ssi-6014;
+;DLG1_DlgObj.setStateInfo({ 	__args_n_MMEDREPID: '0', 	__args_n_POIDID: '0', 	__args_n_MPOIID: '0', 	__args_d_MDATE: '10/11/2024', 	__args_n_LOADTYPE: '0', 	__args_n_MCOMPID: '0', 	__args_n_SYNCINPROGRESS: '0', 	__args_n_MREPID: '0', 	__args_d_MTDATE: '', 	__args_n_SHOWALLDAYINPLAN: '0', 	__args_n_MREPID_1: '0', 	argValuesENC: '7C3tO+HPao0zNV11hCNhkXROUiAe0lvZWY7Xx6LngtmeYNlvKd03vaMUf1FQyyDMHkaLn31fVytMkjMWFQJW2XqMjeADGi+MZr5vQEverln7vv/ExOy11CO5U6OCKIW5xk/RPtEPTtrUAeqCPvgzLMEsCyv6kxftfN1ndaOVO9/4Zw1mxW8nFyEqLjVoKfl7R6Bz/NbcLZRwUb8XYbC9yooi758opYcM+aGYc4fsr35/Lm+68nYiWCO5tMsArPDyvnq/f0eo2ApWzahv4R4gKXgE8oEW0Y8WnbNKoXKXGspfdRJuHhnVqly7QnpDzTav4ySGTIrxRwPUE+niaFxuQUgMqtnWPiaTus2qTHByYMkzLuEdSOdSGNrXfue3+IqwRB5GxoIu86Ab/kB4HJ5zFXd6so+z5wFdJ+NNgN7OYd40cQpcpm5mww==', 	__debugInfo: 'ssi-6014' });//ssi-6014;
 ;
 
 
